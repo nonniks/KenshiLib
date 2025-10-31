@@ -451,4 +451,22 @@ public class ModManager
     gamedirModsPath = Path.Combine(kenshiPath, "mods");
     Console.WriteLine($"[ModManager] Kenshi path set to: {kenshiPath}");
   }
+
+  public static void SetWorkshopPath(string newWorkshopPath)
+  {
+    if (string.IsNullOrEmpty(newWorkshopPath))
+      return;
+
+    workshopModsPath = newWorkshopPath;
+    Console.WriteLine($"[ModManager] Workshop path set to: {workshopModsPath}");
+  }
+
+  public static void SetModsPath(string newModsPath)
+  {
+    if (string.IsNullOrEmpty(newModsPath))
+      return;
+
+    gamedirModsPath = newModsPath;
+    Console.WriteLine($"[ModManager] Game directory mods path set to: {gamedirModsPath}");
+  }
 }
