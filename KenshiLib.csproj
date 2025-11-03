@@ -6,19 +6,24 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>KenshiLib</RootNamespace>
-    <!-- Suppress nullable warnings -->
     <NoWarn>$(NoWarn);CS8618;CS8600;CS8602;CS8604</NoWarn>
 
     <!-- NuGet Package Metadata -->
     <PackageId>KenshiLib</PackageId>
     <Version>1.0.1</Version>
-    <Authors>KenshiTR</Authors>
-    <Company>KenshiTR</Company>
+    <Authors>Aze4ka</Authors>
+    <Company>Doofenshmirtz Evil Incorporated</Company>
     <Product>Kenshi Library</Product>
-    <Description>Core library for Kenshi mod management, providing functionality for mod discovery, playset management, load order handling, and translation support</Description>
+    <Description>Core library for Kenshi mod management, providing functionality for mod discovery, playset management, load order handling, and translation support.</Description>
     <PackageTags>kenshi;mods;library;gamedev</PackageTags>
     <RepositoryUrl>https://github.com/nonniks/KenshiLib</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageProjectUrl>https://github.com/nonniks/KenshiModManager</PackageProjectUrl>
+    <PackageIcon>icons/kenshiicon.png</PackageIcon>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Copyright>Copyright © 2025 Aze4ka, MIT License</Copyright>
+    <PackageReleaseNotes>Add language switcher, improve mod detection, add DeepMorphy and Google Translate support</PackageReleaseNotes>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
 
     <!-- Generate NuGet package on Release build -->
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -74,7 +79,13 @@
       <Link>%(Filename)%(Extension)</Link>
       <Visible>false</Visible>
     </None>
-  </ItemGroup>
 
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons/kenshiicon.png" Pack="true" PackagePath="icons/" />
+  </ItemGroup>
 
 </Project>
